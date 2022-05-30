@@ -5,7 +5,7 @@ import AuthContext from "../../auth/context";
 import authApi from "../../api/auth";
 import jwtDecode from "jwt-decode";
 
-function ActiveProfile({ href, name, children, Icon, size }) {
+function ActiveProfile1({ href, name, children }) {
   const router = useRouter();
 
   const { user, setUser } = useContext(AuthContext);
@@ -46,7 +46,6 @@ function ActiveProfile({ href, name, children, Icon, size }) {
           alignItems: "center",
         }}
       >
-        <Icon color={isCurrentPath ? "#fff" : "rgba(0,0,40,0.8)"} size={size} />
         <span
           style={{
             marginLeft: 10,
@@ -99,4 +98,4 @@ function ActiveProfile({ href, name, children, Icon, size }) {
   );
 }
 
-export default ActiveProfile;
+export default ActiveProfile1;

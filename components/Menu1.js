@@ -6,6 +6,7 @@ import authApi from "../api/auth";
 import Cookies from "js-cookie";
 import AuthContext from "../auth/context";
 import { useRouter } from "next/router";
+import ActiveProfile1 from "./activeStates/ActiveProfile1";
 
 function Menu1({ title, user, menu, setMenu }) {
   const { business, setBusiness } = useContext(AuthContext);
@@ -43,7 +44,7 @@ function Menu1({ title, user, menu, setMenu }) {
           {/* ########### Menu Here ##################### */}
 
           {NavItems.main.map((item, index) => (
-            <ActiveProfile
+            <ActiveProfile1
               key={index}
               href={item.href}
               children={item.children ? item.children : false}
