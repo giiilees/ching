@@ -280,7 +280,7 @@ function MineServices({ menu, setMenu, menu1 }) {
                           <div
                             key={index}
                             style={{
-                              width: "calc(100% - 40px)",
+                              width: "calc(100% - 32px)",
                               flexDirection: "column",
                               display: "flex",
                             }}
