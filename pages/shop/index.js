@@ -21,6 +21,7 @@ import ActiveProfile from "../../components/activeStates/ActiveProfile";
 import Menu from "../../components/Menu";
 import MoonLoader from "react-spinners/MoonLoader";
 import InputField from "../../components/InputField";
+import cookie from "cookie";
 
 const monthNames = [
   "Jan",
@@ -36,6 +37,10 @@ const monthNames = [
   "Nov",
   "Dec",
 ];
+
+function parseCookies(req) {
+  return cookie.parse(req ? req.headers.cookie || "" : document.cookie);
+}
 
 function financial(x) {
   return x ? Number.parseFloat(x).toFixed(2) : "0.00";
@@ -643,3 +648,18 @@ function Shop({ menu, setMenu }) {
 }
 
 export default Shop;
+
+export async function getServerSideProps({ req }) {
+  const cookies = parseCookies(req);
+
+  // And then get element from cookie by name
+  if (!cookies.token) {
+    return {
+      redirect: {
+        permanent: false,
+        destination: "/auth/login",
+      },
+    };
+  }
+  return { props: { cookies } };
+}

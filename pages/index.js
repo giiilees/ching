@@ -110,6 +110,9 @@ export default function Home(props) {
                 réseau en applications audio, données ou multimédias.
               </span>
               <div
+                onClick={() => {
+                  Router.push("/shop");
+                }}
                 style={{
                   display: "flex",
                   width: 180,

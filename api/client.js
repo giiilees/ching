@@ -1,7 +1,7 @@
 import { create } from "apisauce";
 
 const apiClient = create({
-  baseURL: "https://https://chinguitel.herokuapp.com/api/",
+  baseURL: "https://chinguitel.herokuapp.com/api/",
   timeout: 25000,
 });
 

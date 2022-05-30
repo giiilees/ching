@@ -67,7 +67,7 @@ function MyApp({ Component, pageProps }) {
     setIsLoaded(true);
   };
 
-  let socket = useSocket("https://https://chinguitel.herokuapp.com");
+  let socket = useSocket("https://chinguitel.herokuapp.com");
 
   useEffect(() => {
     request();
