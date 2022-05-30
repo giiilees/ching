@@ -319,6 +319,33 @@ function Login({}) {
                   </a>
                 </>
               </form>
+              <a
+                onClick={(e) => {
+                  Router.push("/auth/signup");
+                }}
+                style={{
+                  display: "flex",
+                  height: 40,
+                  borderRadius: 7,
+                  width: "100%",
+                  backgroundColor: "lightgrey",
+                  justifyContent: "center",
+                  alignItems: "center",
+
+                  marginBottom: 50,
+                  cursor: "pointer",
+                }}
+              >
+                <span
+                  style={{
+                    color: "#000",
+                    fontFamily: "SFP-Medium",
+                    fontSize: 15,
+                  }}
+                >
+                  Créer un compte
+                </span>
+              </a>
             </div>
           </div>
         </div>
