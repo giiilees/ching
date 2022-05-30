@@ -26,58 +26,32 @@ import { MdOutlineFeaturedPlayList } from "react-icons/md";
 const NavItems = {
   main: [
     {
-      name: "Portfolio",
+      name: "Accueil",
       href: "/",
-      icon: IoWallet,
-      activeColor: "#1766AF",
-      color: "rgba(0,0,0,0.6)",
-      size: "29px",
+    },
+    {
+      name: "Particuliers      ",
+      href: "/individual",
     },
 
     {
-      name: "Activities",
-      href: "/activities",
-      icon: RiFileList2Fill,
-      isIcon: true,
-      activeColor: "#1766AF",
-      color: "rgba(0,0,0,0.6)",
-      size: "28px",
-      professional: false,
+      name: "Entreprise",
+      href: "/entreprise",
     },
 
     {
-      name: "Recipients",
-      href: "/recipients",
-      icon: HiUsers,
-      isIcon: true,
-      activeColor: "#1766AF",
-      color: "rgba(0,0,0,0.6)",
-      size: "25px",
-      professional: false,
+      name: "Qui somme nous ?",
+      href: "/about",
     },
 
     {
-      name: "Inbox",
-      href: "/inbox",
-      icon: RiInboxFill,
-      isIcon: true,
-      onClick: () => {},
-      activeColor: "#1766AF",
-      color: "rgba(0,0,0,0.6)",
-      size: "28px",
-      professional: false,
+      name: "Services",
+      href: "/shop",
     },
-    // {
-    //   mobOnly: false,
-    //   name: "Profile",
-    //   href: "/profile/account",
-    //   icon: HiMenuAlt3,
-    //   isIcon: false,
-    //   activeColor: "#1766AF",
-    //   color: "rgba(0,0,0,0.6)",
-    //   size: "24px",
-    //   professional: false,
-    // },
+    {
+      name: "Recharge",
+      href: "/recharge",
+    },
     // {
     //   mobOnly: false,
     //   name: "Paramètres",

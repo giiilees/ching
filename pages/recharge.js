@@ -1,6 +1,6 @@
 import React from "react";
 
-function recharge(props) {
+function recharge({ menu1, setMenu1 }) {
   return <div></div>;
 }
 

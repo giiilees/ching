@@ -63,7 +63,7 @@ function dateFormat(time) {
 
 const postNumber = 6;
 
-function Shop({ menu, setMenu }) {
+function Shop({ menu, setMenu, menu1 }) {
   const Router = useRouter();
   const { user, setUser } = useContext(AuthContext);
   const { socket } = useContext(AuthContext);
@@ -131,7 +131,7 @@ function Shop({ menu, setMenu }) {
       }}
     >
       <Head>
-        <title>Payments</title>
+        <title>Services</title>
       </Head>
 
       <div

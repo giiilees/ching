@@ -58,7 +58,7 @@ function dateFormat(time) {
 
 const postNumber = 6;
 
-function MineServices({ menu, setMenu }) {
+function MineServices({ menu, setMenu, menu1 }) {
   const Router = useRouter();
   const { user, setUser } = useContext(AuthContext);
   const { socket } = useContext(AuthContext);
@@ -110,7 +110,7 @@ function MineServices({ menu, setMenu }) {
       }}
     >
       <Head>
-        <title>Mine</title>
+        <title>Mes Services</title>
       </Head>
 
       <div
@@ -325,7 +325,7 @@ function MineServices({ menu, setMenu }) {
                                 {item.isService ? "Service" : "Recharge"}
                               </span>
                               <div
-                                className={"sm:justify-between justify-end"}
+                                className={"sm:justify-between "}
                                 style={{
                                   display: "flex",
                                   width: " 100%",
@@ -341,7 +341,7 @@ function MineServices({ menu, setMenu }) {
                                     textOverflow: "ellipsis",
                                   }}
                                   className={
-                                    " sm:flex hidden sm:w-[calc(100vw-900px)] w-[calc(100vw-260px)]"
+                                    " sm:flex  sm:w-[calc(100vw-900px)] w-[calc(100vw-350px)]"
                                   }
                                 >
                                   {item.isService

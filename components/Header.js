@@ -15,8 +15,9 @@ import { AiFillPhone, AiOutlineWifi } from "react-icons/ai";
 import { BsFillPhoneFill, BsWifi2 } from "react-icons/bs";
 import { FaHeadset, FaInternetExplorer } from "react-icons/fa";
 import ActiveLink from "./activeStates/ActiveLink";
+import { CgClose, CgMathEqual } from "react-icons/cg";
 
-function Header(props) {
+function Header({ menu, setMenu }) {
   const { user, setUser } = useContext(AuthContext);
   const [render, setRender] = useState(0);
   const [cities, setCities] = useState(0);
@@ -81,6 +82,41 @@ function Header(props) {
             flexDirection: "row",
           }}
         >
+          <div
+            className="sm:hidden flex"
+            style={{
+              height: 40,
+              width: 40,
+
+              justifyContent: "center",
+              alignItems: "center",
+              marginRight: 10,
+            }}
+          >
+            {!menu ? (
+              <CgMathEqual
+                className={"sm:hidden flex"}
+                style={{}}
+                color="#fff"
+                size={30}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu(!menu);
+                }}
+              />
+            ) : (
+              <CgClose
+                className={"sm:hidden flex"}
+                style={{}}
+                color="#fff"
+                size={27}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setMenu(!menu);
+                }}
+              />
+            )}
+          </div>
           {!user.token && (
             <div
               onClick={() => {

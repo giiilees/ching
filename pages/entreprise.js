@@ -27,6 +27,7 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import SmallPhoto from "../components/SmallPhoto";
+import Menu1 from "../components/Menu1";
 
 function parseCookies(req) {
   return cookie.parse(req ? req.headers.cookie || "" : document.cookie);
@@ -384,7 +385,7 @@ const rows004 = [
 ];
 const rows005 = [createData6("200 N-UM (2000 A-UM)", "15 N-UM (150 A-UM)")];
 
-export default function Entreprise(props) {
+export default function Entreprise({ menu1, setMenu1 }) {
   const { user, setUser } = useContext(AuthContext);
   const [render, setRender] = useState(0);
 
@@ -455,7 +456,8 @@ export default function Entreprise(props) {
             flexDirection: "column",
           }}
         >
-          <Header />
+          <Header menu={menu1} setMenu={setMenu1} />
+          <Menu1 menu={menu1} setMenu={setMenu1} />
           <div
             className={
               "md:px-[150px] px-[30px] md:flex-row flex-col md:h-[80vh] "

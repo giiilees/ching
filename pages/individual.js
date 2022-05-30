@@ -26,6 +26,7 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Menu1 from "../components/Menu1";
 
 function parseCookies(req) {
   return cookie.parse(req ? req.headers.cookie || "" : document.cookie);
@@ -349,7 +350,7 @@ const rows88 = [
   createData("Renvoi d'appel s'il est difficile d’appeler", "*62*N°#", "#62##"),
 ];
 
-export default function Individual(props) {
+export default function Individual({ menu1, setMenu1 }) {
   const { user, setUser } = useContext(AuthContext);
   const [render, setRender] = useState(0);
 
@@ -404,7 +405,8 @@ export default function Individual(props) {
             flexDirection: "column",
           }}
         >
-          <Header />
+          <Header menu={menu1} setMenu={setMenu1} />
+          <Menu1 menu={menu1} setMenu={setMenu1} />
           <div
             className={
               "md:px-[150px] px-[30px] md:flex-row flex-col md:h-[80vh] "

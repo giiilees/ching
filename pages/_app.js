@@ -20,6 +20,7 @@ function MyApp({ Component, pageProps }) {
   const [user, setUser] = useState("");
   const [business, setBusiness] = useState(null);
   const [menu, setMenu] = useState(false);
+  const [menu1, setMenu1] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
 
   const Router = useRouter();
@@ -28,6 +29,8 @@ function MyApp({ Component, pageProps }) {
     ...pageProps,
     menu,
     setMenu,
+    menu1,
+    setMenu1,
   };
   const options = [
     "/activities",
@@ -73,6 +76,10 @@ function MyApp({ Component, pageProps }) {
     request();
   }, []);
 
+  useEffect(() => {
+    setMenu1(false);
+  }, [Router.asPath]);
+
   if (!isLoaded)
     return (
       <>
@@ -103,7 +110,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel="icon" href="/frame5.png" />
+        <link rel="icon" href="/chingbrowser.png" />
       </Head>
       <div
         style={{

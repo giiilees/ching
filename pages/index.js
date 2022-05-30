@@ -15,12 +15,13 @@ import { AiFillPhone, AiOutlineWifi } from "react-icons/ai";
 import { BsFillPhoneFill, BsWifi2 } from "react-icons/bs";
 import { FaHeadset, FaInternetExplorer } from "react-icons/fa";
 import Header from "../components/Header";
+import Menu1 from "../components/Menu1";
 
 function parseCookies(req) {
   return cookie.parse(req ? req.headers.cookie || "" : document.cookie);
 }
 
-export default function Home(props) {
+export default function Home({ menu1, setMenu1 }) {
   const { user, setUser } = useContext(AuthContext);
   const [render, setRender] = useState(0);
   const [cities, setCities] = useState(0);
@@ -58,7 +59,8 @@ export default function Home(props) {
             flexDirection: "column",
           }}
         >
-          <Header />
+          <Header menu={menu1} setMenu={setMenu1} />
+          <Menu1 menu={menu1} setMenu={setMenu1} />
           <div
             className={
               "sm:px-[150px] px-[30px] sm:flex-row flex-col sm:h-[calc(80%)] "
