@@ -306,8 +306,8 @@ function MineServices({ menu, setMenu, menu1 }) {
                                 borderBottomWidth: 0.5,
                                 borderBottomColor: "rgba(0,0,0,0.1)",
                                 position: "relative",
-                                paddingLeft: 10,
-                                paddingRight: 10,
+                                paddingLeft: 0,
+                                paddingRight: 0,
                                 alignItems: "center",
                                 justifyContent: "space-between",
                               }}
@@ -341,7 +341,7 @@ function MineServices({ menu, setMenu, menu1 }) {
                                     textOverflow: "ellipsis",
                                   }}
                                   className={
-                                    " sm:flex  sm:w-[calc(100vw-900px)] w-[calc(100vw-350px)]"
+                                    " sm:flex  sm:w-[calc(100vw-900px)] w-[calc(100vw-250px)]"
                                   }
                                 >
                                   {item.isService
@@ -357,7 +357,7 @@ function MineServices({ menu, setMenu, menu1 }) {
                                   style={{
                                     display: "flex",
                                     position: "absolute",
-                                    right: 15,
+                                    right: 0,
                                     flexDirection: "row",
                                     alignItems: "center",
                                   }}

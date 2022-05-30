@@ -169,7 +169,7 @@ function Header({ menu, setMenu }) {
                 fontSize: 15,
               }}
             >
-              {!user.token ? "S'inscrire" : "Account"}
+              {!user.token ? "S'inscrire" : "Compte"}
             </span>
           </div>
         </div>

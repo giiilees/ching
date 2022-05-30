@@ -75,7 +75,7 @@ function SignUp({}) {
       }}
     >
       <Head>
-        <title>Login to Deltawire</title>
+        <title>Créer un compte Chinguitel</title>
       </Head>
 
       <div
@@ -135,7 +135,7 @@ function SignUp({}) {
               }}
             >
               <img
-                src={color == "#fff" ? "/frame4dr.png" : "/frame3lt.png"}
+                src={color == "#fff" ? "/vectlogo.png" : "/vectlogo.png"}
                 style={{
                   width: 30,
                   height: 30,
@@ -157,7 +157,7 @@ function SignUp({}) {
               }}
             >
               <img
-                src={color == "#fff" ? "/frame4dr.png" : "/frame3lt.png"}
+                src={color == "#fff" ? "/vectlogo.png" : "/vectlogo.png"}
                 style={{
                   width: 30,
                   height: 30,

@@ -72,7 +72,7 @@ function Login({}) {
       }}
     >
       <Head>
-        <title>Login to Deltawire</title>
+        <title> Connectez-vous à Chinguitel</title>
       </Head>
 
       <div
@@ -132,7 +132,7 @@ function Login({}) {
               }}
             >
               <img
-                src={color == "#fff" ? "/frame4dr.png" : "/frame3lt.png"}
+                src={color == "#fff" ? "/vectlogo.png" : "/vectlogo.png"}
                 style={{
                   width: 30,
                   height: 30,
@@ -154,7 +154,7 @@ function Login({}) {
               }}
             >
               <img
-                src={color == "#fff" ? "/frame4dr.png" : "/frame3lt.png"}
+                src={color == "#fff" ? "/vectlogo.png" : "/vectlogo.png"}
                 style={{
                   width: 30,
                   height: 30,

@@ -347,7 +347,7 @@ function MyApp({ Component, pageProps }) {
                               marginLeft: 5,
                             }}
                           >
-                            {"User"}
+                            {"Compte"}
                           </span>
                         </div>
                       </div>
