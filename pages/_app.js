@@ -77,7 +77,7 @@ function MyApp({ Component, pageProps }) {
     return (
       <>
         <Head>
-          <link rel="icon" href="/frame5.png" />
+          <link rel="icon" href="/chingbrowser.png" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
