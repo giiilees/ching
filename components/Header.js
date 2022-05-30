@@ -122,8 +122,8 @@ function Header({ menu, setMenu }) {
               onClick={() => {
                 Router.push("/auth/login");
               }}
+              className={"sm:flex hidden "}
               style={{
-                display: "flex",
                 cursor: "pointer",
                 height: 40,
                 marginRight: 30,

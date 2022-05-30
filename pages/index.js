@@ -217,38 +217,7 @@ export default function Home({ menu1, setMenu1 }) {
                     </div>
                   </Carousel>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    width: "100%",
-                    //backgroundColor: "red",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    padding: 20,
-                    marginTop: 10,
-                    paddingTop: 20,
-                    paddingBottom: 20,
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: "SFP-Medium",
-                      fontSize: 24,
-                    }}
-                  >
-                    Dernières offres
-                  </span>
-                  <span
-                    style={{
-                      cursor: "pointer",
-                      fontFamily: "SFP-Regular",
-                      fontSize: 18,
-                      color: "blue",
-                    }}
-                  >
-                    Voir tout
-                  </span>
-                </div>
+
                 <div
                   style={{
                     display: "flex",
