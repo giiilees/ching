@@ -407,8 +407,10 @@ function MineServices({ menu, setMenu, menu1 }) {
                                 <div
                                   style={{
                                     display: "flex",
-                                    padding: 20,
-                                    width: "66%",
+                                    padding: 0,
+                                    paddingTop: 20,
+                                    paddingBottom: 10,
+                                    width: "100%",
                                     flexDirection: "column",
                                     //backgroundColor: "green",
                                   }}
@@ -466,15 +468,6 @@ function MineServices({ menu, setMenu, menu1 }) {
                                         item.currency}
                                   </span>
                                 </div>
-                                <div
-                                  style={{
-                                    display: "flex",
-                                    padding: 20,
-                                    width: "33%",
-                                    justifyContent: "flex-end",
-                                    alignItems: "center",
-                                  }}
-                                ></div>
                               </div>
                             )}
                           </div>

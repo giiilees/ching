@@ -41,7 +41,8 @@ function MyApp({ Component, pageProps }) {
     "/menu/security",
     "/menu/security/password",
     "/shop",
-    "/shop/mine",
+    "/shop/recharge",
+    "/services/mine",
     "/payments",
     "/profile/account",
     "/profile/security",
@@ -164,7 +165,7 @@ function MyApp({ Component, pageProps }) {
                       <div
                         className={"sm:hidden flex"}
                         style={{
-                          marginRight: "33%",
+                          marginRight: "31%",
                           width: "100%",
                           height: "100%",
                           // backgroundColor: "red",

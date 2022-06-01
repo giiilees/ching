@@ -118,13 +118,13 @@ export default function Home({ menu1, setMenu1 }) {
                 style={{
                   display: "flex",
                   width: 180,
-                  height: 50,
+                  height: 45,
                   backgroundColor: "#000",
                   justifyContent: "center",
                   alignItems: "center",
                   marginTop: 30,
                   cursor: "pointer",
-                  borderRadius: 0,
+                  borderRadius: 1000,
                 }}
               >
                 <span

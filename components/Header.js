@@ -72,7 +72,7 @@ function Header({ menu, setMenu }) {
           <ActiveLink href={"/entreprise"}>Entreprise</ActiveLink>
           <ActiveLink href={"/about"}>Qui somme nous ?</ActiveLink>
           <ActiveLink href={"/shop"}>Services</ActiveLink>
-          <ActiveLink href={"/recharge"}>Recharge</ActiveLink>
+          <ActiveLink href={"/shop/recharge"}>Recharge</ActiveLink>
         </div>
         <div
           className="sm:right-[150px] right-[30px]"
@@ -159,7 +159,7 @@ function Header({ menu, setMenu }) {
               backgroundColor: "#000",
               justifyContent: "center",
               alignItems: "center",
-              borderRadius: 4,
+              borderRadius: 1000,
             }}
           >
             <span

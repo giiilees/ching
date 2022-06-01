@@ -61,7 +61,7 @@ function dateFormat(time) {
   );
 }
 
-const postNumber = 6;
+const postNumber = 4;
 
 function Shop({ menu, setMenu, menu1 }) {
   const Router = useRouter();
@@ -108,7 +108,7 @@ function Shop({ menu, setMenu, menu1 }) {
       setDisable(false);
       return;
     }
-    Router.push("/shop/mine");
+    Router.push("/services/mine");
     setDisable(false);
   };
 
@@ -269,8 +269,8 @@ function Shop({ menu, setMenu, menu1 }) {
                       }}
                     >
                       {products &&
-                        products[0] &&
-                        products.map((item, index) => {
+                        products.data[0] &&
+                        products.data.map((item, index) => {
                           return (
                             <div
                               key={index}
@@ -335,6 +335,106 @@ function Shop({ menu, setMenu, menu1 }) {
                             </div>
                           );
                         })}
+                      {products && products.data[0] && (
+                        <div
+                          style={{
+                            display: "flex",
+                            width: "100%",
+                            marginTop: 10,
+                            flexDirection: "row",
+                            //marginTop: 15,
+                          }}
+                        >
+                          {page == 0 || !products ? null : (
+                            <div
+                              style={{
+                                width: "100%",
+                              }}
+                            >
+                              <a
+                                onClick={() => {
+                                  if (page == 0 || !products) {
+                                    return;
+                                  }
+                                  setPage(page - 1);
+                                }}
+                                style={{
+                                  display: "flex",
+                                  height: 45,
+                                  flex: 1,
+                                  cursor:
+                                    page == 0 || !products
+                                      ? "not-allowed"
+                                      : "pointer",
+                                  // backgroundColor:
+                                  //   page == 0 || !products ? "rgba(0,0,0,0.1)" : "#000",
+                                  // backgroundColor: "rgba(0,0,0,0.1)",
+                                  // borderRadius: 5,
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <span
+                                  style={{
+                                    fontFamily: "SFP-Regular",
+                                    color: "#2c71d1",
+                                  }}
+                                >
+                                  {"< Previous"}
+                                </span>
+                              </a>
+                            </div>
+                          )}
+
+                          {!products ||
+                          (page + 1) * postNumber >= products.count ? null : (
+                            <div
+                              style={{
+                                width: "100%",
+                              }}
+                            >
+                              <a
+                                onClick={() => {
+                                  if (
+                                    !products ||
+                                    (page + 1) * postNumber >= products.count
+                                  ) {
+                                    return;
+                                  }
+                                  setPage(page + 1);
+                                }}
+                                style={{
+                                  cursor:
+                                    !products ||
+                                    (page + 1) * postNumber >= products.count
+                                      ? "not-allowed"
+                                      : "pointer",
+                                  // backgroundColor:
+                                  //   !payments || (page + 1) * postNumber >= payments.count
+                                  //     ? "rgba(0,0,0,0.1)"
+                                  //     : "#000",
+                                  display: "flex",
+                                  height: 45,
+                                  flex: 1,
+
+                                  //borderRadius: 5,
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                }}
+                              >
+                                <span
+                                  style={{
+                                    fontFamily: "SFP-Regular",
+                                    color: "#2c71d1",
+                                  }}
+                                >
+                                  {"Next >"}
+                                </span>
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
                 )}
@@ -433,7 +533,7 @@ function Shop({ menu, setMenu, menu1 }) {
                             <div
                               key={index}
                               style={{
-                                width: "calc(100% - 40px)",
+                                width: "calc(100% - 32px)",
                                 flexDirection: "column",
                                 display: "flex",
                               }}
@@ -463,8 +563,8 @@ function Shop({ menu, setMenu, menu1 }) {
                                   // marginBottom: 10,
                                   //borderRadius: 5,
                                   position: "relative",
-                                  paddingLeft: 10,
-                                  paddingRight: 10,
+                                  paddingLeft: 0,
+                                  paddingRight: 0,
                                   alignItems: "center",
                                   justifyContent: "space-between",
                                 }}
@@ -522,7 +622,7 @@ function Shop({ menu, setMenu, menu1 }) {
                                     style={{
                                       display: "flex",
                                       position: "absolute",
-                                      right: 15,
+                                      right: 0,
                                       flexDirection: "row",
                                       alignItems: "center",
                                     }}
@@ -537,17 +637,6 @@ function Shop({ menu, setMenu, menu1 }) {
                                         paddingLeft: 7,
                                         paddingRight: 7,
                                         borderRadius: 5,
-                                      }}
-                                    >
-                                      {""}
-                                    </span>
-                                    <span
-                                      className={" sm:flex hidden "}
-                                      style={{
-                                        minWidth: 80,
-                                        marginLeft: 20,
-                                        color: "rgba(0,0,40,0.7)",
-                                        fontFamily: "SFP-Regular",
                                       }}
                                     >
                                       {">"}

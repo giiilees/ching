@@ -1,4 +1,9 @@
-import { IoNotificationsSharp, IoSettings, IoWallet } from "react-icons/io5";
+import {
+  IoNotificationsSharp,
+  IoSettings,
+  IoSettingsOutline,
+  IoWallet,
+} from "react-icons/io5";
 import { IoIosContacts } from "react-icons/io";
 import { AiFillCreditCard, AiOutlineDollar } from "react-icons/ai";
 import { GrTransaction } from "react-icons/gr";
@@ -50,7 +55,7 @@ const NavItems = {
     },
     {
       name: "Recharge",
-      href: "/recharge",
+      href: "/shop/recharge",
     },
     // {
     //   mobOnly: false,
@@ -65,19 +70,25 @@ const NavItems = {
   ],
   menu: [
     {
+      name: "Mes services",
+      href: "/services/mine",
+      icon: RiUser4Line,
+      size: 23,
+    },
+    {
       name: "Services",
-      href: "/shop/mine",
+      href: "/shop",
       icon: MdOutlineFeaturedPlayList,
       size: 23,
       children: [
-        { name: "Mes services", href: "/shop/mine" },
         { name: "Tout les services", href: "/shop" },
+        { name: "Recharge", href: "/shop/recharge" },
       ],
     },
     {
       name: "Réglages",
       href: "/menu/profile",
-      icon: RiUser4Line,
+      icon: IoSettingsOutline,
       size: 23,
       children: [
         { name: "Profile", href: "/menu/profile" },
