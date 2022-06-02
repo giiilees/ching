@@ -758,7 +758,7 @@ export default function Home({ menu1, setMenu1 }) {
             >
               <span
                 className={
-                  "sm:w-[38vw] w-[100%] sm:text-[48px] text-[40px] sm:mt-[0px] mt-[50px] "
+                  "lg:w-[38vw] w-[100%] lg:text-[48px] text-[40px] lg:mt-[0px] mt-[50px] "
                 }
                 style={{
                   fontFamily: "SFP-SemiBold",
@@ -770,7 +770,7 @@ export default function Home({ menu1, setMenu1 }) {
               </span>
               <span
                 className={
-                  "sm:w-[30vw] w-[100%] sm:text-[18px] text-[19px] sm:mt-[0px] mt-[50px] "
+                  "lg:w-[30vw] w-[100%] lg:text-[18px] text-[19px] lg:mt-[0px] mt-[50px] "
                 }
                 style={{
                   fontFamily: "SFP-Regular",
@@ -834,7 +834,7 @@ export default function Home({ menu1, setMenu1 }) {
             </div>
           </div>
           <div
-            className="sm:px-[75px] px-[0px] "
+            className="lg:px-[75px] px-[0px] "
             style={{
               width: "100vw",
 
