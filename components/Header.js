@@ -83,7 +83,7 @@ function Header({ menu, setMenu }) {
           }}
         >
           <div
-            className="sm:hidden flex"
+            className="lg:hidden flex"
             style={{
               height: 40,
               width: 40,
@@ -95,7 +95,7 @@ function Header({ menu, setMenu }) {
           >
             {!menu ? (
               <CgMathEqual
-                className={"sm:hidden flex"}
+                className={"lg:hidden flex"}
                 style={{}}
                 color="#fff"
                 size={30}
@@ -106,7 +106,7 @@ function Header({ menu, setMenu }) {
               />
             ) : (
               <CgClose
-                className={"sm:hidden flex"}
+                className={"lg:hidden flex"}
                 style={{}}
                 color="#fff"
                 size={27}

@@ -3,11 +3,11 @@ import ReactModal from "react-modal";
 import { IoMdClose } from "react-icons/io";
 import styles from "../styles/SideModal.module.css";
 
-function SideModal({ title, modalVis, setModalVis, children }) {
+function SideModal({ title, modal, setModal, children }) {
   return (
     <ReactModal
-      isOpen={modalVis}
-      onRequestClose={() => setModalVis(false)}
+      isOpen={modal}
+      onRequestClose={() => setModal(false)}
       className={styles.ReactModal__Content}
       overlayClassName={styles.ReactModal__Overlay}
     >
@@ -20,7 +20,7 @@ function SideModal({ title, modalVis, setModalVis, children }) {
         }
       >
         <div
-          onClick={() => setModalVis(false)}
+          onClick={() => setModal(false)}
           className={
             "flex h-[30px] absolute left-[30px] self-left w-[30px] rounded-[25px] justify-center items-center bg-transparent hover:bg-[rgba(0,0,0,0.1)] "
           }
@@ -39,7 +39,9 @@ function SideModal({ title, modalVis, setModalVis, children }) {
           {title}
         </span>
       </div>
-      <div className={"flex flex-1 w-[100%] flex-col overflow-y-scroll "}>
+      <div
+        className={"flex p-[20px] flex-1 w-[100%] flex-col overflow-y-scroll "}
+      >
         {children}
       </div>
     </ReactModal>
