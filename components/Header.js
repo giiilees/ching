@@ -30,6 +30,7 @@ function Header({ menu, setMenu }) {
       style={{
         width: "100%",
         height: 75,
+        zIndex: 9999999999,
       }}
     >
       <div
