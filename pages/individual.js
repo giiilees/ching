@@ -384,6 +384,10 @@ export default function Individual({ menu1, setMenu1 }) {
         height: "100%",
       }}
     >
+      <Head>
+        <title>Individual</title>
+      </Head>
+
       <div
         style={{
           display: "flex",

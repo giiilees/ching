@@ -435,6 +435,10 @@ export default function Entreprise({ menu1, setMenu1 }) {
         height: "100%",
       }}
     >
+      <Head>
+        <title>Entreprise</title>
+      </Head>
+
       <div
         style={{
           display: "flex",

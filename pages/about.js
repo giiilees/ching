@@ -414,6 +414,9 @@ export default function About({ menu1, setMenu1 }) {
         height: "100%",
       }}
     >
+      <Head>
+        <title> Qui sommes-nous?</title>
+      </Head>
       <div
         style={{
           display: "flex",

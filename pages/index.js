@@ -468,6 +468,10 @@ export default function Home({ menu1, setMenu1 }) {
         height: "100%",
       }}
     >
+      <Head>
+        <title>Chinguitel</title>
+      </Head>
+
       <div
         style={{
           display: "flex",
@@ -837,7 +841,6 @@ export default function Home({ menu1, setMenu1 }) {
             className="lg:px-[75px] px-[0px] "
             style={{
               width: "100vw",
-
               paddingTop: 0,
               paddingBottom: 0,
               position: "relative",

@@ -74,6 +74,7 @@ function Header({ menu, setMenu }) {
           <ActiveLink href={"/about"}>Qui somme nous ?</ActiveLink>
           <ActiveLink href={"/shop"}>Services</ActiveLink>
           <ActiveLink href={"/shop/recharge"}>Recharge</ActiveLink>
+          <ActiveLink href={"/contact"}>Contact</ActiveLink>
         </div>
         <div
           className="sm:right-[150px] right-[30px]"
