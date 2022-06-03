@@ -57,6 +57,10 @@ const NavItems = {
       name: "Recharge",
       href: "/shop/recharge",
     },
+    {
+      name: "Contact",
+      href: "/contact",
+    },
     // {
     //   mobOnly: false,
     //   name: "Paramètres",
