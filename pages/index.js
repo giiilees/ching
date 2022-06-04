@@ -1097,9 +1097,9 @@ export default function Home({ menu1, setMenu1 }) {
                     </span>
                   </div>
                   <div
-                    // onClick={() => {
-                    //   setStep(4);
-                    // }}
+                    onClick={() => {
+                      Router.push("/contact");
+                    }}
                     style={{
                       display: "flex",
                       justifyContent: "center",

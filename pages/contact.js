@@ -40,8 +40,7 @@ function parseCookies(req) {
 export default function Contact({ menu1, setMenu1 }) {
   const { user, setUser } = useContext(AuthContext);
   const [disabled, setDisable] = useState(false);
-  const [firstname, setFirstName] = useState("");
-  const [lastname, setLastName] = useState("");
+  const [name, setName] = useState("");
   const [company, setCompany] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -54,23 +53,28 @@ export default function Contact({ menu1, setMenu1 }) {
     setDisable(true);
     e.preventDefault();
     const result = await authApi.newContact(
-      firstname,
-      lastname,
-      company,
-      email,
-      phone,
-      subject,
-      details
+      name.toString(),
+      company.toString(),
+      email.toString(),
+      phone.toString(),
+      subject.toString(),
+      details.toString()
     );
     if (!result.ok) {
-      console.log(result);
+      alert(result.data);
       setDisable(false);
       return;
     }
     alert("Requête Envoyé");
-    window.location.reload();
+    //window.location.reload();
     setDisable(false);
   };
+
+  useEffect(() => {
+    if (!user) return;
+    setName(user.data.name);
+    setPhone(user.data.phone);
+  }, [user]);
 
   return (
     <div
@@ -204,20 +208,13 @@ export default function Contact({ menu1, setMenu1 }) {
                   }
                 >
                   <InputField
-                    name="firstname"
-                    placeholder="Prenom ( Obligatoire )"
-                    value={firstname}
+                    name="name"
+                    placeholder="Nom complet ( Obligatoire )"
+                    value={name}
                     type="text"
-                    onChange={(e) => setFirstName(e.target.value)}
+                    onChange={(e) => setName(e.target.value)}
                   />
 
-                  <InputField
-                    name="lastname"
-                    placeholder="Nom ( Obligatoire )"
-                    value={lastname}
-                    type="text"
-                    onChange={(e) => setLastName(e.target.value)}
-                  />
                   <InputField
                     name="company"
                     placeholder="Compagnie"

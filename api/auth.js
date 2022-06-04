@@ -81,20 +81,11 @@ const newOrder = (token, isService, service, amount, currency) =>
     { headers: { Authorization: token } }
   );
 
-const newContact = (
-  firstname,
-  lastname,
-  company,
-  email,
-  phone,
-  subject,
-  details
-) =>
+const newContact = (name, company, email, phone, subject, details) =>
   Client.apiClient.post(
     "services/contact",
     {
-      firstname,
-      lastname,
+      name,
       company,
       email,
       phone,
