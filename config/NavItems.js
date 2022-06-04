@@ -27,6 +27,7 @@ import Colors from "./Colors";
 import { FaMoneyCheckAlt, FaUsers } from "react-icons/fa";
 import { CgShoppingBag } from "react-icons/cg";
 import { MdOutlineFeaturedPlayList } from "react-icons/md";
+import { BsChatSquare } from "react-icons/bs";
 
 const NavItems = {
   main: [
@@ -98,6 +99,14 @@ const NavItems = {
         { name: "Profile", href: "/menu/profile" },
         { name: "Sécurité", href: "/menu/security" },
       ],
+    },
+
+    {
+      name: "Contact",
+      href: "/contact",
+      icon: BsChatSquare,
+      size: 23,
+      external: true,
     },
   ],
   send: [

@@ -4,8 +4,9 @@ import AuthContext from "../../auth/context";
 
 import authApi from "../../api/auth";
 import jwtDecode from "jwt-decode";
+import { CgArrowTopRight } from "react-icons/cg";
 
-function ActiveProfile({ href, name, children, Icon, size }) {
+function ActiveProfile({ href, name, children, Icon, size, external }) {
   const router = useRouter();
 
   const { user, setUser } = useContext(AuthContext);
@@ -36,6 +37,7 @@ function ActiveProfile({ href, name, children, Icon, size }) {
         href={href}
         onClick={handleClick}
         style={{
+          position: "relative",
           display: "flex",
           height: 45,
           width: "100%",
@@ -56,6 +58,16 @@ function ActiveProfile({ href, name, children, Icon, size }) {
         >
           {name}
         </span>
+        {external && (
+          <CgArrowTopRight
+            style={{
+              position: "absolute",
+              right: 20,
+            }}
+            color={isCurrentPath ? "#fff" : "rgba(0,0,40,0.8)"}
+            size={size}
+          />
+        )}
       </a>
 
       {children &&

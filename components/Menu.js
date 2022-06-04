@@ -48,6 +48,7 @@ function Menu({ title, user, menu, setMenu }) {
             name={item.name}
             Icon={item.icon}
             size={item.size}
+            external={item.external ? item.external : false}
           />
         ))}
       </div>
